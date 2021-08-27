@@ -20,12 +20,14 @@ const scene = new THREE.Scene();
 const textureLoader = new THREE.TextureLoader();
 
 // Background
-const space = textureLoader.load("/textures/space.jpg");
+const space = textureLoader.load(window.location.href + "/textures/space.jpg");
 scene.background = space;
 
 // Star
 function addStar() {
-  const starTexture = textureLoader.load("/textures/star.png");
+  const starTexture = textureLoader.load(
+    window.location.href + "/textures/star.png"
+  );
   const geometry = new THREE.PlaneGeometry(0.15, 0.15);
   const material = new THREE.MeshStandardMaterial({
     map: starTexture,
@@ -48,7 +50,9 @@ Array(500).fill().forEach(addStar);
 const geometry = new THREE.SphereGeometry(1, 32, 32);
 
 // Sun
-const sunTexture = textureLoader.load("/textures/sun.jpg");
+const sunTexture = textureLoader.load(
+  window.location.href + "/textures/sun.jpg"
+);
 const sun = new THREE.Mesh(
   geometry,
   new THREE.MeshStandardMaterial({
@@ -58,7 +62,9 @@ const sun = new THREE.Mesh(
 sun.name = "sun-desc";
 
 // Mercury
-const mercuryTexture = textureLoader.load("/textures/mercury.jpg");
+const mercuryTexture = textureLoader.load(
+  window.location.href + "/textures/mercury.jpg"
+);
 const mercury = new THREE.Mesh(
   geometry,
   new THREE.MeshStandardMaterial({
@@ -69,7 +75,9 @@ mercury.name = "mercury-desc";
 mercury.position.y = -3;
 
 // Venus
-const venusTexture = textureLoader.load("/textures/venus.jpg");
+const venusTexture = textureLoader.load(
+  window.location.href + "/textures/venus.jpg"
+);
 const venus = new THREE.Mesh(
   geometry,
   new THREE.MeshStandardMaterial({
@@ -80,8 +88,12 @@ venus.name = "venus-desc";
 venus.position.y = -6;
 
 // Earth
-const earthTexture = textureLoader.load("/textures/earth.jpg");
-const earthNormalMap = textureLoader.load("/textures/earth_normal_map.png");
+const earthTexture = textureLoader.load(
+  window.location.href + "/textures/earth.jpg"
+);
+const earthNormalMap = textureLoader.load(
+  window.location.href + "/textures/earth_normal_map.png"
+);
 const earth = new THREE.Mesh(
   geometry,
   new THREE.MeshStandardMaterial({
@@ -93,7 +105,9 @@ earth.name = "earth-desc";
 earth.position.y = -9;
 
 // Mars
-const marsTexture = textureLoader.load("/textures/mars.jpg");
+const marsTexture = textureLoader.load(
+  window.location.href + "/textures/mars.jpg"
+);
 const mars = new THREE.Mesh(
   geometry,
   new THREE.MeshStandardMaterial({
@@ -104,7 +118,9 @@ mars.name = "mars-desc";
 mars.position.y = -12;
 
 // Jupiter
-const jupiterTexture = textureLoader.load("/textures/jupiter.jpg");
+const jupiterTexture = textureLoader.load(
+  window.location.href + "/textures/jupiter.jpg"
+);
 const jupiter = new THREE.Mesh(
   geometry,
   new THREE.MeshStandardMaterial({
@@ -115,7 +131,9 @@ jupiter.name = "jupiter-desc";
 jupiter.position.y = -15;
 
 // Saturn
-const saturnTexture = textureLoader.load("/textures/saturn.jpg");
+const saturnTexture = textureLoader.load(
+  window.location.href + "/textures/saturn.jpg"
+);
 const saturn = new THREE.Mesh(
   geometry,
   new THREE.MeshStandardMaterial({
@@ -126,7 +144,9 @@ saturn.name = "saturn-desc";
 saturn.position.y = -18;
 
 // Uranus
-const uranusTexture = textureLoader.load("/textures/uranus.jpg");
+const uranusTexture = textureLoader.load(
+  window.location.href + "/textures/uranus.jpg"
+);
 const uranus = new THREE.Mesh(
   geometry,
   new THREE.MeshStandardMaterial({
@@ -137,7 +157,9 @@ uranus.name = "uranus-desc";
 uranus.position.y = -21;
 
 // Neptune
-const neptuneTexture = textureLoader.load("/textures/neptune.jpg");
+const neptuneTexture = textureLoader.load(
+  window.location.href + "/textures/neptune.jpg"
+);
 const neptune = new THREE.Mesh(
   geometry,
   new THREE.MeshStandardMaterial({
