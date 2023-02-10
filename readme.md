@@ -1,7 +1,4 @@
-# Three.js Starter
-Courtesy of Bruno Simon of https://threejs-journey.xyz/
-
-## Setup
+# Installation
 Download [Node.js](https://nodejs.org/en/download/).
 Run this followed commands:
 
